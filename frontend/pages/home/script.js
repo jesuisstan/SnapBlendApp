@@ -14,6 +14,7 @@ const btnRoll = document.querySelector('.btn--roll');
 const btnHold = document.querySelector('.btn--hold');
 
 const btnToAbout = document.getElementById('about');
+const btnToGallery = document.getElementById('gallery');
 
 let play, scores, activePlayer, currentScore;
 
@@ -21,7 +22,12 @@ const toAbout = () => {
   window.location.href = '/about';
 };
 
+const toGallery = () => {
+  window.location.href = '/gallery';
+};
+
 btnToAbout.addEventListener('click', toAbout);
+btnToGallery.addEventListener('click', toGallery);
 
 function init() {
   play = true;

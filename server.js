@@ -17,6 +17,10 @@ app.get('/about', (req, res) => {
   res.sendFile(path.resolve(__dirname, 'frontend/pages/about', 'index.html'));
 });
 
+app.get('/gallery', (req, res) => {
+  res.sendFile(path.resolve(__dirname, 'frontend/pages/gallery', 'index.html'));
+});
+
 app.listen(port, () => {
-  console.log(`Сервер запущен на порту ${port}`);
+  console.log(`Server is running on port ${port}`);
 });
