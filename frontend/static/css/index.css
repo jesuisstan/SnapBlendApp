@@ -1,3 +1,7 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
 body {
     --nav-width: 200px;
     margin: 0 0 0 var(--nav-width);
@@ -34,4 +38,10 @@ body {
 
 a {
     color: #009579;
+}
+
+.xxx {
+    display: flex;
+    flex-direction: row;
+    gap: 41px;
 }

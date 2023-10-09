@@ -11,3 +11,19 @@ export default class {
         return "";
     }
 }
+
+//export default function AbstractView(params) {
+//    const setTitle = (title) => {
+//      document.title = title;
+//    };
+  
+//    const getHtml = async () => {
+//      return "";
+//    };
+  
+//    return {
+//      params,
+//      setTitle,
+//      getHtml
+//    };
+//  }
