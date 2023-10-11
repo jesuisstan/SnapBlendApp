@@ -4,8 +4,9 @@
   "description": "camagru-42-project",
   "main": "index.js",
   "scripts": {
+    "start-server": "http-server ./frontend/static",
     "start": "node server.js",
-    "dev": "node server.js"
+    "dev": "concurrently \"npm run start-server\" \"node server.js\""
   },
   "author": "Stan Krivtsoff",
   "license": "ISC",
@@ -16,6 +17,7 @@
     "mongoose": "^7.6.1"
   },
   "devDependencies": {
+    "http-server": "^14.1.1",
     "prettier": "^3.0.3"
   }
 }
