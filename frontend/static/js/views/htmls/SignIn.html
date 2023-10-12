@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head> </head>
+  <body>
+    <h1 class="text-xxl font-bold">SIGN Innnnnnnnnnnnnn</h1>
+    <p><a href="/posts" data-link>View recent posts</a>.</p>
+    <p>XXXXXXXXXXXXXXXXXXXXX</p>
+    <button class="btn btn--back" onclick="window.location.href = '/';">
+      🔄 Back to home
+    </button>
+    <button><a href="/" data-link>Back home</a>.</button>
+    <br />
+    <button class="btn btn--back" onclick="changeLocation('/')">
+      🔄 Back to home
+    </button>
+
+    <script>
+      function changeLocation(url) {
+        window.history.pushState({}, '', url);
+      }
+    </script>
+  </body>
+</html>

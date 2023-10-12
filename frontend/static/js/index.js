@@ -50,7 +50,7 @@ const router = async () => {
 
     document.querySelector("#app").innerHTML = await view.getHtml();
 };
-
+    
 window.addEventListener("popstate", router);
 
 document.addEventListener("DOMContentLoaded", () => {

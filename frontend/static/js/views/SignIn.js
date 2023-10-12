@@ -7,7 +7,7 @@ export default class extends AbstractView {
   }
 
   async getHtml() {
-    const response = await fetch('/static/js/htmls/SignIn.html'); // Используйте правильный путь к файлу
+    const response = await fetch('/static/js/views/htmls/SignIn.html');
     
     if (response.ok) {
       const html = await response.text();
