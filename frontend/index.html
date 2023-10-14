@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Single Page App</title>
     <link rel="stylesheet" href="./static/css/index.css" />
-    <style>
+    <!--<style>
       #app {
         margin: 30px;
         margin-left: calc(30px + 220px);
@@ -16,7 +16,7 @@
           margin: 30px;
         }
       }
-    </style>
+    </style>-->
   </head>
   <body>
     <button
@@ -44,8 +44,8 @@
 
     <aside id="separator-sidebar" class="asideMenu" aria-label="Sidebar">
       <div class="asideContainer">
-        <ul class="asideContainer2">
-          <li>
+        <div class="asideContainer2">
+
             <a href="/">
               <svg
                 aria-hidden="true"
@@ -62,9 +62,7 @@
               </svg>
               <span>Dashboard</span>
             </a>
-          </li>
 
-          <li>
             <a href="/posts">
               <svg
                 aria-hidden="true"
@@ -78,9 +76,7 @@
               </svg>
               <span>Posts</span>
             </a>
-          </li>
 
-          <li>
             <a href="#">
               <svg
                 aria-hidden="true"
@@ -94,11 +90,10 @@
               </svg>
               <span>Upgrade to Pro</span>
             </a>
-          </li>
-        </ul>
 
-        <ul class="asideDevider">
-          <li>
+          </div>
+
+        <div class="asideDevider">
             <a href="/sign-in">
               <svg
                 aria-hidden="true"
@@ -116,8 +111,7 @@
               </svg>
               <span>Sign In</span>
             </a>
-          </li>
-          <li>
+
             <a href="#">
               <svg
                 aria-hidden="true"
@@ -135,8 +129,7 @@
               </svg>
               <span>Sign Up</span>
             </a>
-          </li>
-          <li>
+
             <a href="/settings">
               <svg
                 aria-hidden="true"
@@ -150,8 +143,8 @@
               </svg>
               <span>Settings</span>
             </a>
-          </li>
-        </ul>
+
+          </div>
       </div>
     </aside>
 

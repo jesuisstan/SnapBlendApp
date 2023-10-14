@@ -10,8 +10,18 @@
     </button>
     <button><a href="/" data-link>Back home</a>.</button>
     <br />
-    <button class="btn btn--back" onclick="changeLocation('/')">
-      🔄 Back to home
+    
+    <button
+      class="btn btn--back"
+      onclick="window.history.pushState({}, '', '/');"
+    >
+      🔄 Back to home (script onClick)
+    </button>
+
+    <button
+      class="btn btn--bk"
+    >
+      🔄 Back to home (querySelector btn--bk)
     </button>
 
     <script>
