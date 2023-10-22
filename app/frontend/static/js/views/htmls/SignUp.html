@@ -2,31 +2,69 @@
 <html>
   <head> </head>
   <body>
-    <div class="SUbasicCard">
-      <div class="sign-up-form-box">
-        <form id="sign-up" class="input-group">
-          <h1>Sign Up</h1>
-          <p>
-            Already have an account?
-            <a href="/sign-in" class="switch-to-su">Sign in</a>
-          </p>
+    <section class="container forms">
+      <div class="form signup">
+        <div class="form-content">
+          <header>Sign Up</header>
 
-          <input
-            type="text"
-            class="input-field"
-            placeholder="Nickname"
-            required
-          />
-          <input type="text" class="input-field" placeholder="Email" required />
-          <input
-            type="text"
-            class="input-field"
-            placeholder="Password"
-            required
-          />
-          <button type="submit" class="sign-up-btn" required>Submit</button>
-        </form>
+          <div class="form-link">
+            <span>
+              Already have an account?
+              <a href="/sign-in" class="signup-link">Sign in</a>
+            </span>
+          </div>
+
+          <form action="#">
+            <div class="field input-field">
+              <input
+                type="text"
+                class="input-field"
+                placeholder="Nickname"
+                required
+              />
+            </div>
+
+            <div class="field input-field">
+              <input
+                type="email"
+                class="input-field"
+                placeholder="Email"
+                required
+              />
+            </div>
+
+            <div class="field input-field">
+              <input
+                type="password"
+                class="input-field"
+                placeholder="Password"
+                required
+              />
+              <i class="bx bx-hide eye-icon"></i>
+            </div>
+
+            <div class="field input-field">
+              <input
+                type="password"
+                class="input-field"
+                placeholder="Confirm password"
+                required
+                
+              />
+              <i class="bx bx-hide eye-icon"></i>
+            </div>
+
+            <div class="invisible">
+              <p>invisible text</p>
+            </div>
+
+            <div class="field button-field">
+              <button class="submit-sign-up-btn">Submit</button>
+            </div>
+
+          </form>
+        </div>
       </div>
-    </div>
+    </section>
   </body>
 </html>

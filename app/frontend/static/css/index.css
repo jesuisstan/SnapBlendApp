@@ -1,9 +1,11 @@
 body {
   --nav-width: 200px;
+  --42-green: #00babc;
   /*margin: 0 0 0 var(--nav-width);*/
   font-family: 'Quicksand', sans-serif;
   font-size: 16px;
-  background-color: whitesmoke;
+  background-color: ivory;
+  color: black;
 }
 
 .nav {
@@ -41,7 +43,7 @@ body {
 }
 
 a {
-  color: #009579;
+  color: lightseagreen;
 }
 
 h1 {
@@ -60,8 +62,9 @@ h1 {
   margin-top: 0.5rem;
   margin-left: 0.75rem;
   font-size: 0.875rem;
-  color: #718096;
+  color: var(--42-green);
   border-radius: 0.5rem;
+  background-color: #00babc;
 }
 
 @media (max-width: 640px) {
@@ -92,20 +95,16 @@ h1 {
 }
 
 .asideMenu a {
-  color: whitesmoke; /* Assuming you're using the default text color from Tailwind CSS */
+  text-decoration: none;
+  color: whitesmoke;
   display: flex;
   align-items: center;
   padding: 0.5rem;
   border-radius: 0.375rem; /* Equivalent to Tailwind's "rounded-lg" class */
+}
 
-  &:dark {
-    color: #ffffff; /* Equivalent to Tailwind's "dark:text-white" class */
-    background-color: #4a5568; /* Equivalent to Tailwind's "dark:hover:bg-gray-700" class */
-  }
-
-  &:hover {
-    background-color: #f3f4f6; /* Equivalent to Tailwind's "hover:bg-gray-100" class */
-  }
+.asideMenu a:hover {
+  color: black;
 }
 
 .asideContainer {
@@ -115,15 +114,13 @@ h1 {
   padding-top: 1rem; /* 4 times 1rem */
   padding-bottom: 1rem; /* 4 times 1rem */
   overflow-y: auto;
-  background-color: #00babc; /* Assuming you're using the default background color from Tailwind CSS */
+  background-color: var(--42-green);
+  opacity: 0.95;
   color: whitesmoke; /* Assuming you're using the default text color from Tailwind CSS */
-
-  &:dark {
-    background-color: #1f2937; /* Replace with your dark mode background color if different */
-    color: #d1d5db; /* Replace with your dark mode text color if different */
-  }
 }
-
+ .asideContainer:hover {
+opacity: 1;
+ }
 .asideContainer2 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;

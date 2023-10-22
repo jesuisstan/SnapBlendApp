@@ -1,0 +1,110 @@
+.container {
+  height: calc(100vh - 60px);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  max-width: 430px;
+  width: 100%;
+  padding: 30px;
+  border-radius: 42px;
+  border: 2px solid lightsalmon;
+  background-color: whitesmoke;
+}
+
+header {
+  font-size: 28px;
+  font-weight: 600;
+  color: lightsalmon;
+  text-align: center;
+}
+
+form {
+  margin-top: -20px;
+}
+
+form .field {
+  height: 50px;
+  width: 100%;
+  margin-top: 20px;
+  position: relative;
+}
+
+.field input,
+.field button {
+  height: 100%;
+  width: 100%;
+  border: none;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 42px;
+}
+
+.eye-icon {
+  font-size: 18px;
+  position: absolute;
+  color: var(--42-green);
+  top: 50%;
+  right: 10px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.form-link {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.form-link span,
+.form-link a {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.form a {
+  color: var(--42-green);
+  text-decoration: none;
+}
+
+.form a:hover {
+  text-decoration: underline;
+}
+
+.submit-sign-in-btn {
+  background-color: var(--42-green);
+  cursor: pointer;
+  opacity: 0.85;
+}
+
+.submit-sign-in-btn:hover {
+  opacity: 1;
+}
+
+.submit-sign-up-btn {
+  background-color: var(--42-green);
+  cursor: pointer;
+  opacity: 0.85;
+}
+
+.submit-sign-up-btn:hover {
+  opacity: 1;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px 0;
+  margin: 5px 0;
+  border-left: 0;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 1px solid #999;
+  outline: none;
+  background: transparent;
+}
+
+.invisible {
+  color: transparent;
+}
