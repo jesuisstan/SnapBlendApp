@@ -18,13 +18,15 @@ rad.json
 *.flf
 #Test results file
 TestResults.xml
+
 node_modules
-package-lock.json
 .prettierignore
 .prettierrc
 
 # dependencies
 /node_modules
+/app/node_modules
+/app/build
 /build
 /.pnp
 .pnp.js
