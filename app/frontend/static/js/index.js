@@ -3,6 +3,7 @@ import Posts from './views/Posts.js';
 import PostView from './views/PostView.js';
 import Settings from './views/Settings.js';
 import SignIn from './views/SignIn.js';
+import SignUp from './views/SignUp.js';
 
 const pathToRegex = (path) =>
   new RegExp('^' + path.replace(/\//g, '\\/').replace(/:\w+/g, '(.+)') + '$');
@@ -31,7 +32,8 @@ const router = async () => {
     { path: '/posts', view: Posts },
     { path: '/posts/:id', view: PostView },
     { path: '/settings', view: Settings },
-    { path: '/sign-in', view: SignIn }
+    { path: '/sign-in', view: SignIn },
+    { path: '/sign-up', view: SignUp }
   ];
 
   // Test each route for potential match
@@ -57,14 +59,27 @@ const router = async () => {
 
   document.querySelector('#app').innerHTML = await view.getHtml();
 
-  function changeLocation() {
-    console.log('XXX');
-    window.location.href = '/';
+  if (match.route.path === '/sign-in') {
+    const btnSubmit = document.querySelector('.sign-in-btn');
+
+    function signIn(e) {
+      e.preventDefault(); // Prevent default form submission behavior
+      console.log('signIn');
+      // Add your sign-in logic here
+    }
+
+    btnSubmit.addEventListener('click', signIn);
   }
 
-  if (match.route.path === '/sign-in') {
-    const btnNew = document.querySelector('.btn--bk');
-    btnNew.addEventListener('click', changeLocation);
+  if (match.route.path === '/sign-up') {
+    const btnSubmit = document.querySelector('.sign-up-btn');
+
+    function signUp(e) {
+      e.preventDefault(); // Prevent default form submission behavior
+      console.log('signUUUUUUp');
+    }
+
+    btnSubmit.addEventListener('click', signUp);
   }
 };
 

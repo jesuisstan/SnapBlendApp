@@ -2,32 +2,32 @@
 <html>
   <head> </head>
   <body>
-    <h1 class="text-xxl font-bold">SIGN Innnnnnnnnnnnnn</h1>
-    <p><a href="/posts" data-link>View recent posts</a>.</p>
-    <p>XXXXXXXXXXXXXXXXXXXXX</p>
-    <button class="btn btn--back" onclick="window.location.href = '/';">
-      🔄 Back to home
-    </button>
-    <button><a href="/" data-link>Back home</a>.</button>
-    <br />
-    
-    <button
-      class="btn btn--back"
-      onclick="window.history.pushState({}, '', '/');"
-    >
-      🔄 Back to home (script onClick)
-    </button>
-
-    <button
-      class="btn btn--bk"
-    >
-      🔄 Back to home (querySelector btn--bk)
-    </button>
-
-    <script>
-      function changeLocation(url) {
-        window.history.pushState({}, '', url);
-      }
-    </script>
+    <div class="SIbasicCard">
+      <div class="sign-in-form-box">
+        <form id="sign-in" class="input-group">
+          <h1>Sign In</h1>
+          <p>Don't have an account? <a href="/sign-up" class="switch-to-su">Sign up</a></p>
+          <input
+            type="text"
+            class="input-field"
+            placeholder="Nickname / Email"
+            required
+          />
+          <input
+            type="text"
+            class="input-field"
+            placeholder="Password"
+            required
+          />
+          <button
+            type="submit"
+            class="sign-in-btn"
+            required
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
