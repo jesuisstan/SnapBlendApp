@@ -2,6 +2,10 @@ const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
+const userRoutes = require('./routes/usersRoute.js');
+const authRoutes = require('./routes/authRoute.js');
+const cookieParser = require('cookie-parser');
+const cors = require('cors');
 
 const app = express();
 
@@ -17,6 +21,36 @@ const connect = () => {
       throw err;
     });
 };
+
+// Configure CORS middleware
+app.use(
+  cors({
+    origin: `${process.env.REACT_APP_HOST}:${process.env.REACT_APP_FRONTEND_PORT}`,
+    methods: 'GET,POST,PUT,DELETE',
+    credentials: true,
+  })
+);
+
+//middlewares
+app.use(cookieParser());
+
+app.use('/api/check', (req, res) => {
+  res.send("Hello from InfoMapApp server")
+});
+
+app.use('/api/auth', authRoutes);
+app.use('/api/users', userRoutes);
+
+//error handler
+app.use((err, req, res, next) => {
+  const status = err.status || 500;
+  const message = err.message || 'Something went wrong!';
+  return res.status(status).json({
+    success: false,
+    status,
+    message
+  });
+});
 
 app.use(
   '/static',

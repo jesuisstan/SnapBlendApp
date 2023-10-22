@@ -60,12 +60,29 @@ const router = async () => {
   document.querySelector('#app').innerHTML = await view.getHtml();
 
   if (match.route.path === '/sign-in') {
-    const btnSubmit = document.querySelector('.sign-in-btn');
+    const btnSubmit = document.querySelector('.submit-sign-in-btn');
 
     function signIn(e) {
       e.preventDefault(); // Prevent default form submission behavior
       console.log('signIn');
-      // Add your sign-in logic here
+
+      const email = 'test@test.com';
+      const password = 'qqq1!';
+      console.log(email, password);
+      try {
+        const response = fetch(`/api/auth/signin`, {
+          method: 'POST', // Set the method to POST
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          credentials: 'include', // Use 'include' to send cookies along with the request
+          body: JSON.stringify({ email, password }) // Convert the data to a JSON string
+        });
+        console.log('user signed in');
+        console.log(response);
+      } catch (error) {
+        console.log('error sign in');
+      }
     }
 
     btnSubmit.addEventListener('click', signIn);
