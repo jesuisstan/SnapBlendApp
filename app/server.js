@@ -25,9 +25,9 @@ const connect = () => {
 // Configure CORS middleware
 app.use(
   cors({
-    origin: `${process.env.REACT_APP_HOST}:${process.env.REACT_APP_FRONTEND_PORT}`,
+    origin: `${process.env.HOST}:${process.env.FRONTEND_PORT}`,
     methods: 'GET,POST,PUT,DELETE',
-    credentials: true,
+    credentials: true
   })
 );
 
@@ -35,7 +35,7 @@ app.use(
 app.use(cookieParser());
 
 app.use('/api/check', (req, res) => {
-  res.send("Hello from InfoMapApp server")
+  res.send('Hello from InfoMapApp server');
 });
 
 app.use('/api/auth', authRoutes);
